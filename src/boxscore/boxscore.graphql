@@ -1,0 +1,186 @@
+  type Arena {
+    arenaId: Int
+    arenaName: String
+    arenaCity: String
+    arenaState: String
+    arenaCountry: String
+    arenaTimezone: String
+  }
+
+  type Official {
+    personId: Int
+    name: String
+    nameI: String
+    firstName: String
+    familyName: String
+    jerseyNum: String
+    assignment: String
+  }
+
+  type Player {
+    personId: Int
+    firstName: String
+    familyName: String
+    jerseyNum: String
+    position: String
+    points: Int
+    assists: Int
+    rebounds: Int
+  }
+
+  type Period {
+    period: Int
+    score: Int
+    periodType: Int
+  }
+
+  type Statistics {
+    fieldGoalsMade: Int
+    fieldGoalsAttempted: Int
+    threePointersMade: Int
+    threePointersAttempted: Int
+    freeThrowsMade: Int
+    freeThrowsAttempted: Int
+    rebounds: Int
+    assists: Int
+    steals: Int
+    blocks: Int
+    turnovers: Int
+    fouls: Int
+  }
+
+  type Team {
+    teamId: Int
+    teamName: String
+    teamCity: String
+    teamTricode: String
+    score: Int
+    inBonus: String
+    timeoutsRemaining: Int
+    periods: [Period]
+    players: [Player]
+    statistics: Statistics
+  }
+
+  type PlayerStatistics {
+    minutes: String
+    fieldGoalsMade: Int
+    fieldGoalsAttempted: Int
+    fieldGoalsPercentage: Float
+    threePointersMade: Int
+    threePointersAttempted: Int
+    threePointersPercentage: Float
+  }
+
+  type Player {
+    personId: Int
+    firstName: String
+    familyName: String
+    nameI: String
+    playerSlug: String
+    position: String
+    comment: String
+    jerseyNum: String
+    statistics: PlayerStatistics
+  }
+
+  type FinalGameTeam {
+    teamId: Int
+    teamCity: String
+    teamName: String
+    teamTricode: String
+    teamSlug: String
+    players: [Player]
+  }
+
+  type BoxScoreTraditional {
+    gameId: String
+    awayTeamId: Int
+    homeTeamId: Int
+    homeTeam: FinalGameTeam
+    awayTeam: FinalGameTeam
+  }
+
+  type LiveGame {
+    gameId: String
+    gameTimeLocal: String
+    gameTimeUTC: String
+    gameTimeHome: String
+    gameTimeAway: String
+    gameEt: String
+    duration: Int
+    gameCode: String
+    gameStatusText: String
+    gameStatus: Int
+    regulationPeriods: Int
+    period: Int
+    gameClock: String
+    attendance: Int
+    sellout: String
+    arena: Arena
+    officials: [Official]
+    homeTeam: Team
+    awayTeam: Team
+  }
+
+  type Leaders {
+    personId: Int
+    name: String
+    jerseyNum: String
+    position: String
+    teamTricode: String
+    playerSlug: String
+    points: Int
+    rebounds: Int
+    assists: Int
+  }
+  
+  type GameLeaders {
+    homeLeaders: Leaders
+    awayLeaders: Leaders
+  }
+
+  type PbOdds {
+    team: String
+    odds: Int
+    suspended: Int
+  }
+
+  # type returned by subscription
+  type LiveScoreBoardGame {
+    gameId: String
+    gameCode: String
+    gameStatus: Int
+    gameStatusText: String
+    period: Int
+    gameClock: String
+    gameTimeUTC: String
+    gameEt: String
+    regulationPeriods: Int
+    ifNecessary: Boolean
+    seriesGameNumber: String
+    gameLabel: String
+    gameSubLabel: String
+    seriesText: String
+    seriesConference: String
+    poRoundDesc: String
+    gameSubtype: String  
+    homeTeam: Team
+    awayTeam: Team
+    gameLeaders: GameLeaders
+    pbOdds: PbOdds
+  }
+
+  union Game = LiveGame | BoxScoreTraditional
+
+  type Query {
+    game(gameId: ID!): Game
+  }
+
+  type Subscription {
+    gameUpdated(gameId: ID!): LiveScoreBoardGame
+  }
+
+  # type FinalGame {
+  #   boxScoreTraditional: BoxScoreTraditional
+  # }
