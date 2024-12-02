@@ -17,6 +17,7 @@ import { BoxScoreService } from './boxscore/boxscore.service';
         'graphql-ws': true,
       },
       playground: false,
+      introspection: true,
       plugins: [
         ApolloServerPluginLandingPageLocalDefault()
       ],
