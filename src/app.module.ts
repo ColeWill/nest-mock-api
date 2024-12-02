@@ -4,10 +4,10 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
-// import { BoxScoreModule } from '@boxscoreModule';
-// import { BoxScoreService } from '@boxscoreService';
 import { HttpModule } from '@nestjs/axios';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
+import { BoxScoreModule } from './boxscore/boxscore.module';
+import { BoxScoreService } from './boxscore/boxscore.service';
 
 @Module({
   imports: [
@@ -26,12 +26,12 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
         outputAs: 'class'
       },
     }),
-    // BoxScoreModule,
+    BoxScoreModule,
     HttpModule
   ],
   controllers: [AppController],
   providers: [AppService, 
-    // BoxScoreService
+    BoxScoreService
   ],
 })
 export class AppModule {}

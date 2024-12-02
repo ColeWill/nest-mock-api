@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "version": 1,
+    "request": "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/WNBA/liveData/scoreboard/todaysScoreboard_10.json",
+    "time": "2024-05-17 09:41:24.4124",
+    "code": 200
+  },
+  "scoreboard": {
+    "gameDate": "2024-05-17",
+    "leagueId": "10",
+    "leagueName": "Women's National Basketball Association",
+    "games": [
+      {
+        "gameId": "1022400008",
+        "gameCode": "20240517/WASCON",
+        "gameStatus": 2,
+        "gameStatusText": "Q4 :13.9",
+        "period": 4,
+        "gameClock": "PT00M13.90S",
+        "gameTimeUTC": "2024-05-17T23:30:00Z",
+        "gameEt": "2024-05-17T19:30:00-04:00",
+        "regulationPeriods": 4,
+        "ifNecessary": false,
+        "seriesGameNumber": "",
+        "gameLabel": null,
+        "gameSubLabel": null,
+        "seriesText": "",
+        "seriesConference": "",
+        "poRoundDesc": "",
+        "gameSubtype": "",
+        "homeTeam": {
+          "teamId": 1611661323,
+          "teamName": "Sun",
+          "teamCity": "Connecticut",
+          "teamTricode": "CON",
+          "wins": 1,
+          "losses": 0,
+          "score": 80,
+          "seed": null,
+          "inBonus": "0",
+          "timeoutsRemaining": 1,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 18
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 18
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 16
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 28
+            }
+          ]
+        },
+        "awayTeam": {
+          "teamId": 1611661322,
+          "teamName": "Mystics",
+          "teamCity": "Washington",
+          "teamTricode": "WAS",
+          "wins": 0,
+          "losses": 1,
+          "score": 77,
+          "seed": null,
+          "inBonus": "1",
+          "timeoutsRemaining": 1,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 20
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 16
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 20
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 21
+            }
+          ]
+        },
+        "gameLeaders": {
+          "homeLeaders": {
+            "personId": 201886,
+            "name": "DeWanna Bonner",
+            "jerseyNum": "24",
+            "position": "FG",
+            "teamTricode": "CON",
+            "playerSlug": "dewanna-bonner",
+            "points": 20,
+            "rebounds": 6,
+            "assists": 1
+          },
+          "awayLeaders": {
+            "personId": 1628317,
+            "name": "Karlie Samuelson",
+            "jerseyNum": "44",
+            "position": "G",
+            "teamTricode": "WAS",
+            "playerSlug": "karlie-samuelson",
+            "points": 18,
+            "rebounds": 3,
+            "assists": 4
+          }
+        },
+        "pbOdds": {
+          "team": null,
+          "odds": 0.0,
+          "suspended": 0
+        }
+      },
+      {
+        "gameId": "1022400009",
+        "gameCode": "20240517/SEAMIN",
+        "gameStatus": 1,
+        "gameStatusText": "9:30 pm ET",
+        "period": 0,
+        "gameClock": "",
+        "gameTimeUTC": "2024-05-18T01:30:00Z",
+        "gameEt": "2024-05-17T21:30:00Z",
+        "regulationPeriods": 4,
+        "ifNecessary": false,
+        "seriesGameNumber": "",
+        "gameLabel": "Regular Season - Tip-Off Test Drive by CarMax",
+        "gameSubLabel": "",
+        "seriesText": "",
+        "seriesConference": "",
+        "poRoundDesc": "",
+        "gameSubtype": "",
+        "homeTeam": {
+          "teamId": 1611661324,
+          "teamName": "Lynx",
+          "teamCity": "Minnesota",
+          "teamTricode": "MIN",
+          "wins": 1,
+          "losses": 0,
+          "score": 0,
+          "seed": null,
+          "inBonus": null,
+          "timeoutsRemaining": 0,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "awayTeam": {
+          "teamId": 1611661328,
+          "teamName": "Storm",
+          "teamCity": "Seattle",
+          "teamTricode": "SEA",
+          "wins": 0,
+          "losses": 1,
+          "score": 0,
+          "seed": null,
+          "inBonus": null,
+          "timeoutsRemaining": 0,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "gameLeaders": {
+          "homeLeaders": {
+            "personId": 0,
+            "name": "",
+            "jerseyNum": "",
+            "position": "",
+            "teamTricode": "MIN",
+            "playerSlug": null,
+            "points": 0,
+            "rebounds": 0,
+            "assists": 0
+          },
+          "awayLeaders": {
+            "personId": 0,
+            "name": "",
+            "jerseyNum": "",
+            "position": "",
+            "teamTricode": "SEA",
+            "playerSlug": null,
+            "points": 0,
+            "rebounds": 0,
+            "assists": 0
+          }
+        },
+        "pbOdds": {
+          "team": null,
+          "odds": 0.0,
+          "suspended": 0
+        }
+      }
+    ]
+  }
+}
